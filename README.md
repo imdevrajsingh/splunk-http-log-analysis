@@ -37,6 +37,9 @@ This project is fully reproducible by anyone following the provided documentatio
 6. Unusual HTTP Methods  
 7. Large Data Transfer Detection  
 
+📌 Full SPL queries for all dashboards: [`spl/queries.md`](spl/queries.md)  
+📌 Step-by-step reproduction instructions: [`docs/`](docs/)
+
 These dashboards together provide deep visibility into:
 - Web scanning tools (sqlmap, curl, python scripts, botnet scanners)  
 - Error spikes and misconfigurations  
@@ -107,6 +110,16 @@ Below are the dashboards in the order of detection importance:
 
 
 ---
+
+## ⚡ Quick Start (How to Reproduce)
+
+
+1. Download or clone this repository  
+2. Open Splunk → Add Data → Upload `data/http_logs.json`  
+3. Set sourcetype to `_json` and index name to `httplogs`
+4. Run SPL queries from [`spl/queries.md`](spl/queries.md)
+5. Build dashboards manually OR import XML (if provided)
+
 
 
 ## 🧪 Dataset Used
