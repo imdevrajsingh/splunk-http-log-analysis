@@ -1,14 +1,14 @@
 # Splunk HTTP Log Analysis Project (7 Security Dashboards)
 
-This project showcases my complete end-to-end analysis of HTTP logs in Splunk, where I built **seven SOC-focused security dashboards**.  
-The objective of this project is to detect malicious activities such as sensitive file access attempts, scanning, data exfiltration, enumeration, and abnormal web behavior.
+This repository contains my complete end-to-end Splunk project for analyzing HTTP logs and detecting malicious activity using seven SOC-focused dashboards.  
+I built these dashboards to identify threat patterns such as scanning, unusual methods, large data transfers, attack spikes, and sensitive file access attempts.
 
 This project demonstrates my hands-on experience with:
-- Log ingestion in Splunk
-- Writing SPL queries
-- Building dashboards
-- Investigating suspicious web traffic
-- Detecting attacker behavior using HTTP logs
+- Log ingestion & parsing in Splunk
+- Writing SPL queries for threat detection
+- Creating SOC dashboards
+- Investigating attacker behavior in HTTP logs
+- Identifying anomalies & attack patterns
 
 ---
 
@@ -29,22 +29,22 @@ This project is fully reproducible by anyone following the provided documentatio
 
 ## 📊 Dashboards Included (7 Total)
 
-1. **Sensitive File Access Attempts Dashboard**  
-2. **Suspicious User Agents Dashboard**  
-3. **Large Data Transfer Detection Dashboard**  
-4. **Uncommon / Suspicious HTTP Methods Dashboard**  
-5. **Suspicious Admin & Hidden Paths Dashboard**  
-6. **Error Rate / Status Code Analysis Dashboard**  
-7. **Top Suspicious Source Hosts Dashboard**
+1. Suspicious User Agents Detected  
+2. Error Code Analysis  
+3. Top Attackers (Top Source IPs)  
+4. Time-based Attack Timeline  
+5. Sensitive File Access Attempts  
+6. Unusual HTTP Methods  
+7. Large Data Transfer Detection  
 
-These dashboards help detect:
-- LFI attempts  
-- Reconnaissance & scanning  
-- Bot/Crawler activity  
-- Misuse of uncommon methods  
-- Web shell attempts  
-- Data exfiltration  
-- Abnormal traffic patterns  
+These dashboards together provide deep visibility into:
+- Web scanning tools (sqlmap, curl, python scripts, botnet scanners)  
+- Error spikes and misconfigurations  
+- Attack origin sources  
+- Time-based attack patterns  
+- LFI attempts and sensitive file probing  
+- Abuse of HTTP methods  
+- Potential data exfiltration
 
 ---
 
@@ -60,10 +60,19 @@ splunk-http-log-analysis/
 │ ├── sensitive_file_access_attempts.xml
 │ ├── suspicious_user_agents.xml
 │ ├── large_transfer_detection.xml
-│ ├── uncommon_http_methods.xml
-│ ├── suspicious_admin_paths.xml
-│ ├── error_rate_analysis.xml
-│ └── top_suspicious_hosts.xml
+│ ├── unusual_http_methods.xml
+│ ├── attack_timeline.xml
+│ ├── error_code_analysis.xml
+│ └── top_attackers.xml
+│
+├── images/
+│ ├── dashboard1_sensitive_file_access.png
+│ ├── dashboard2_suspicious_user_agents.png
+│ ├── dashboard3_large_transfer_detection.png
+│ ├── dashboard4_unusual_http_methods.png
+│ ├── dashboard5_attack_timeline.png
+│ ├── dashboard6_error_code_analysis.png
+│ └── dashboard7_top_attackers.png
 │
 ├── spl/
 │ └── queries.md
@@ -78,6 +87,36 @@ splunk-http-log-analysis/
 Each folder and file has a specific purpose to help others understand and reproduce the project easily.
 
 ---
+
+
+## 📸 Dashboard Screenshots
+
+Below are the dashboards in the order of detection importance:
+
+### 1. Suspicious User Agents Detected  
+![Suspicious User Agents](images/dashboard2_suspicious_user_agents.png)
+
+### 2. Error Code Analysis  
+![Error Code Analysis](images/dashboard6_error_code_analysis.png)
+
+### 3. Top Attackers (Top Source IPs)  
+![Top Attackers](images/dashboard7_top_attackers.png)
+
+### 4. Time-based Attack Timeline  
+![Time-based Attack Timeline](images/dashboard5_attack_timeline.png)
+
+### 5. Sensitive File Access Attempts  
+![Sensitive File Access Attempts](images/dashboard1_sensitive_file_access.png)
+
+### 6. Unusual HTTP Methods  
+![Unusual HTTP Methods](images/dashboard4_unusual_http_methods.png)
+
+### 7. Large Data Transfer Detection  
+![Large Data Transfer Detection](images/dashboard3_large_transfer_detection.png)
+
+
+---
+
 
 ## 🧪 Dataset Used
 
