@@ -56,15 +56,6 @@ splunk-http-log-analysis/
 ├── data/
 │ └── http_logs.json
 │
-├── dashboards/
-│ ├── sensitive_file_access_attempts.xml
-│ ├── suspicious_user_agents.xml
-│ ├── large_transfer_detection.xml
-│ ├── unusual_http_methods.xml
-│ ├── attack_timeline.xml
-│ ├── error_code_analysis.xml
-│ └── top_attackers.xml
-│
 ├── images/
 │ ├── dashboard1_sensitive_file_access.png
 │ ├── dashboard2_suspicious_user_agents.png
@@ -155,16 +146,6 @@ Follow the docs and you will get the exact dashboards I created.
 
 ---
 
-## 📁 Dashboard XML Files
-
-All 7 dashboards built in Splunk are exported and stored in the `/dashboards/` folder.  
-They can be imported using:
-
-**Splunk → Dashboards → Import → Upload XML**
-
-This instantly recreates my dashboards on any machine.
-
----
 
 ## 🎯 Skills Demonstrated
 
